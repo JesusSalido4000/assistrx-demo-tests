@@ -2,10 +2,10 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import pages.LoginPage;
 import static org.junit.Assert.*;
 import utils.DriverFactory;
