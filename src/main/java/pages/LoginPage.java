@@ -25,4 +25,18 @@ public class LoginPage {
     public boolean isErrorVisible() {
         return driver.findElement(errorMessage).isDisplayed();
     }
+    public void logout() {
+        driver.findElement(By.id("react-burger-menu-btn")).click();
+        try { Thread.sleep(500); } catch (InterruptedException e) {}
+        driver.findElement(By.id("logout_sidebar_link")).click();
+    }
+    
+    public void addItemToCart() {
+        driver.findElement(By.cssSelector(".inventory_item:first-child button")).click();
+    }
+    
+    public boolean isBackOnLoginPage() {
+        return driver.getCurrentUrl().contains("saucedemo.com");
+    }
+    
 }
